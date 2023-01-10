@@ -45,6 +45,15 @@
     disable_gpg_check: yes 
   tags:
     - gitlab
+    - name: Open Firewall Ports 
+  become: yes
+  firewalld: 
+    permanent: true
+    state: enabled
+    immediate: yes
+  with_items:
+    - http
+    - https
 
 - name: Display Password
   debug: 
