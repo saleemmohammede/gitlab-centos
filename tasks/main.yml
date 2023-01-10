@@ -45,7 +45,7 @@
     disable_gpg_check: yes 
   tags:
     - gitlab
-    - name: Open Firewall Ports 
+- name: Open Firewall Ports 
   become: yes
   firewalld: 
     permanent: true
