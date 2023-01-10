@@ -2,7 +2,7 @@
 # tasks file for gitlab-centos
 
 - name: Install test package
-  shell: yum install nano -y
+  yum:  install nano -y
 
 - name: Install pre-reqs
   become: yes
