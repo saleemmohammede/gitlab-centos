@@ -44,12 +44,6 @@
     disable_gpg_check: yes 
   tags:
     - gitlab
-- name: GitLab reconfigure
-  become: yes
-  shell: gitlab-ctl reconfigure
-  tags: 
-    - gitlab
-  notify: start_gitlab
 - name: Display Password
   debug: 
     msg: "Login credentials for the GitLab admin are  root / root"
