@@ -45,14 +45,6 @@
     disable_gpg_check: yes 
   tags:
     - gitlab
-- name: Open Firewall Ports 
-  become: yes
-  firewalld:
-        port: 81/tcp
-        state: enabled
-        permanent: yes
-        immediate: yes
-
 - name: Display Password
   debug: 
     msg: "Login credentials for the GitLab admin are  root / root"
