@@ -2,7 +2,7 @@
   hosts: gitlab-server
   vars_files:
     - vars/main.yml
-  remote_user: root
+  remote_user: ansible
   tasks: 
     - include: tasks/main.yml
   handlers:
