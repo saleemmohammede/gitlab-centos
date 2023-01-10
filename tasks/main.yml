@@ -44,7 +44,7 @@
     disable_gpg_check: yes 
   tags:
     - gitlab
- - name: GitLab reconfigure
+- name: GitLab reconfigure
   become: yes
   shell: /bin/gitlab-ctl reconfigure
   tags: 
