@@ -46,7 +46,7 @@
     - gitlab
 - name: GitLab reconfigure
   become: yes
-  shell: /bin/gitlab-ctl reconfigure
+  shell: gitlab-ctl reconfigure
   tags: 
     - gitlab
   notify: start_gitlab
