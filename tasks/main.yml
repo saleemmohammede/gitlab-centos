@@ -45,14 +45,6 @@
     disable_gpg_check: yes 
   tags:
     - gitlab
-
-- name: GitLab reconfigure
-  become: yes
-  shell: /bin/gitlab-ctl reconfigure
-  tags: 
-    - gitlab
-  notify: start_gitlab
-
 - name: Open Firewall Ports 
   become: yes
   firewalld: 
