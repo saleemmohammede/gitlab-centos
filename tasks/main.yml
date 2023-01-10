@@ -36,7 +36,6 @@
     - gitlab 
     - gitlab_repo
   notify: yum_clean
-
 - name: Installing GitLab
   become: yes
   yum:
@@ -45,6 +44,12 @@
     disable_gpg_check: yes 
   tags:
     - gitlab
+ - name: GitLab reconfigure
+  become: yes
+  shell: /bin/gitlab-ctl reconfigure
+  tags: 
+    - gitlab
+  notify: start_gitlab
 - name: Display Password
   debug: 
     msg: "Login credentials for the GitLab admin are  root / root"
